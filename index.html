@@ -29,25 +29,100 @@
             padding: 5px;
             margin: 0 0 20px 0;
         }
+        .command-button {
+            background-color: #0f0;
+            color: #000;
+            padding: 5px;
+            margin: 0 0 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .command-description {
+            display: none;
+        }
     </style>
+    <script>
+        function showDescription(command) {
+            var descriptions = document.getElementsByClassName("command-description");
+            for (var i = 0; i < descriptions.length; i++) {
+                descriptions[i].style.display = "none";
+            }
+            document.getElementById(command).style.display = "block";
+        }
+    </script>
 </head>
 <body>
     <h1>Linux Commands Explanation</h1>
 
-    <h2>Command: 'who'</h2>
-    <h3>Description:</h3>
-    <p>This command lists all the users connected to the system. Each line corresponds to a connection, and contains the username, date and time of connection, and the workstation address of the user.</p>
+    <h2>Terminal</h2>
+    <h3>How to access?</h3>
+    <p>To access terminal, press Ctrl+Alt+T</p>  
 
-    <h2>Command: 'id'</h2>
-    <h3>Description:</h3>
-    <p>This command displays the user ID (UID) and group ID (GID) of the current user or a specified user.</p>
+    <button class="command-button" onclick="showDescription('who')">who</button>
+    <div id="who" class="command-description">
+        <h2>Command: 'who'</h2>
+        <h3>Description:</h3>
+        <p>This command lists all the users connected to the system. Each line corresponds to a connection, and contains the username, date and time of connection, and the workstation address of the user.</p>
+    </div>
 
-    <h2>Command: 'useradd'</h2>
-    <h3>Description:</h3>
-    <p>This command is used to make a new user account on Linux systems. It makes a user without a password, and then the password can be set using the 'passwd' command.</p>
+    <button class="command-button" onclick="showDescription('id')">id</button>
+    <div id="id" class="command-description">
+        <h2>Command: 'id'</h2>
+        <h3>Description:</h3>
+        <p>This command displays the user ID (UID) and group ID (GID) of the current user or a specified user.</p>
+    </div>
 
+    <button class="command-button" onclick="showDescription('useradd')">useradd</button>
+    <div id="useradd" class="command-description">
+        <h2>Command: 'useradd'</h2>
+        <h3>Description:</h3>
+        <p>This command is used to make a new user account on Linux systems. It makes a user without a password, and then the password can be set using the 'passwd' command.</p>
+    </div>
+    
+    <button class="command-button" onclick="showDescription('groupadd')">groupadd</button>
+    <div id="groupadd" class="command-description">
     <h2>Command: 'groupadd'</h2>
     <h3>Description:</h3>
     <p>This command is used to make a new group on Linux systems.</p>
+     </div>
+     
+    <button class="command-button" onclick="showDescription('pwd')">pwd</button>
+    <div id="pwd" class="command-description">
+    <h2>Command: 'pwd'</h2>
+    <h3>Description:</h3>
+    <p>This command displays the current working directory.</p>
+     </div>
+     
+     <button class="command-button" onclick="showDescription('cd')">cd</button>
+    <div id="cd" class="command-description">
+     <h2>Command: 'cd'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to change the current working directory.</p>
+     </div>
+     
+     <button class="command-button" onclick="showDescription('ls')">ls</button>
+     <div id="ls" class="command-description">
+     <h2>Command: 'ls'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to list the files and directories in the current working directory. </p>
+     </div>
+     
+     <button class="command-button" onclick="showDescription('mkdir')">mkdir</button>
+     <div id="mkdir" class="command-description">
+     <h2>Command: 'mkdir'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to create a new directory.</p>
+     </div>
+     
+     <button class="command-button" onclick="showDescription('rmdir')">rmdir</button>
+     <div id="rmdir" class="command-description">
+     <h2>Command: 'rmdir'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to remove a directory.</p>
+     </div>
+     
+     
+    
 </body>
 </html>
