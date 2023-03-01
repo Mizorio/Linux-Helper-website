@@ -57,7 +57,14 @@
 
     <h2>Terminal</h2>
     <h3>How to access?</h3>
-    <p>To access terminal, press Ctrl+Alt+T</p>  
+    <p>To access terminal, press Ctrl+Alt+T</p> 
+
+    <button class="command-button" onclick="showDescription('sudo')">sudo</button>
+    <div id="sudo" class="command-description">
+     <h2>Command: 'sudo'</h2>
+     <h3>Description:</h3>
+    <p>This command allows a user with administrative privileges to execute commands as another user or as the superuser (root).</p>
+    </div>
 
     <button class="command-button" onclick="showDescription('who')">who</button>
     <div id="who" class="command-description">
@@ -122,7 +129,67 @@
      <p>This command is used to remove a directory.</p>
      </div>
      
+     <button class="command-button" onclick="showDescription('top')">top</button>
+     <div id="top" class="command-description">
+     <h2>Command: 'top'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to display information about the processes currently using the most system resources.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('chown')">chown</button>
+     <div id="chown" class="command-description">
+     <h2>Command: 'chown'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to change the owner and group of a file or directory.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('chmod')">chmod</button>
+     <div id="chmod" class="command-description">
+     <h2>Command: 'chmod'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to change the permissions of a file or directory.</p>
+     </div>
      
+     <button class="command-button" onclick="showDescription('ps')">ps</button>
+     <div id="ps" class="command-description">
+     <h2>Command: 'ps'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to display information about the currently running processes.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('ifconfig')">ifconfig</button>
+     <div id="ifconfig" class="command-description">
+     <h2>Command: 'ifconfig'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to display the network configuration of the current device.</p>
+     </div>
     
+     <button class="command-button" onclick="showDescription('cat')">cat</button>
+     <div id="cat" class="command-description">
+     <h2>Command: 'cat'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to display the contents of a file on the command line.</p>
+     </div>
+    
+     <button class="command-button" onclick="showDescription('tail')">tail</button>
+     <div id="tail" class="command-description">
+     <h2>Command: 'tail'</h2>
+     <h3>Description:</h3>
+     <p>The 'tail' command is used to display the last few lines of a text file in a terminal window.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('pacman')">pacman</button>
+     <div id="pacman" class="command-description">
+     <h2>Command: 'pacman'</h2>
+     <h3>Description:</h3>
+     <p>This command is a package manager for the Arch Linux operating system. It is used to install, upgrade, and manage software packages on an Arch Linux system.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('pacman')">pacman</button>
+     <div id="pacman" class="command-description">
+     <h2>Command: 'apt-get'</h2>
+     <h3>Description:</h3>
+     <p>This command is used on Debian and Ubuntu-based Linux systems to install, remove, and manage software packages.</p>
+     </div>
 </body>
 </html>
