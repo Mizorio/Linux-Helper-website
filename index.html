@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linux commands explanation</title>
-    <style>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linux commands explanation</title>
+<style>
         body {
             background-color: #000;
             color: #0f0;
@@ -39,9 +39,7 @@
         }
         .command-description {
             display: none;
-        }
-    </style>
-    <script>
+        }</style><script>
         function showDescription(command) {
             var descriptions = document.getElementsByClassName("command-description");
             for (var i = 0; i < descriptions.length; i++) {
@@ -49,10 +47,28 @@
             }
             document.getElementById(command).style.display = "block";
         }
-    </script>
-</head>
-
-<form>
+        function stupidGpt() {
+            var input = document.getElementById("command-input").value;
+            var output = "";
+            switch (input) {
+                case "sudo":
+                    output = "Do anything you want. You are the boss.";
+                    break;
+                case "who":
+                    output = "Just some people. Don't worry about it.";
+                    break;
+                case "id":
+                    output = "I don't know. Who are you?";
+                    break;
+                default:
+                    output = "I have no idea what you're talking about.";
+                    break;
+            }
+            document.getElementById("gpt-output").innerHTML = output;
+        }
+        </script>
+        </head>
+        <form>
     <label for="linux-distro">Choose the Linux distro that you need help with: </label>
     <select id="linux-distro" name="linux-distro">
       <option value="debian">Debian</option>
@@ -60,10 +76,11 @@
     </select>
     <input type="submit" value="Submit">
   </form>
-  
-<body>
+  <body>
     <h1>Linux Commands Explanation</h1>
-
+    <input type="text" id="command-input">
+    <button onclick="stupidGpt()">Ask Stupid GPT</button>
+    <div id="gpt-output"></div>
     <h2>Terminal</h2>
     <h3>How to access?</h3>
     <p>To access terminal, press Ctrl+Alt+T</p> 
