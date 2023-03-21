@@ -52,13 +52,64 @@
             var output = "";
             switch (input) {
                 case "sudo":
-                    output = "Do anything you want. You are the boss.";
+                    output = "Do anything you want. You're the boss.";
                     break;
                 case "who":
                     output = "Just some people. Don't worry about it.";
                     break;
                 case "id":
                     output = "I don't know. Who are you?";
+                    break;
+                case "useradd":
+                    output = "Why would you want to add a user? You're the only one who matters.";
+                    break;
+                case "groupadd":
+                    output = "You don't need anyone else in your group. You're already the best.";
+                    break;
+                case "pwd":
+                    output = "I'm not sure where you are. Maybe you're lost?";
+                    break;
+                case "cd":
+                    output = "Why bother changing directories? Everything you need is right here.";
+                    break;
+                case "ls":
+                    output = "You don't need to see a list of files. You already know what's there.";
+                    break;
+                case "mkdir":
+                    output = "Why make a new directory? You already have everything you need.";
+                    break;
+                case "rmdir":
+                    output = "Why remove a directory? There's nothing you need to get rid of.";
+                    break;
+                case "top":
+                    output = "You're already on top. You don't need to check.";
+                    break;
+                case "chown":
+                    output = "You own everything. You don't need to change ownership.";
+                    break;
+                case "chmod":
+                    output = "You have all the permissions you need. Don't worry about changing them.";
+                    break;
+                case "ps":
+                    output = "You're the only process that matters. No need to check on anything else.";
+                    break;
+                case "ifconfig":
+                    output = "You don't need to configure anything. Everything is already perfect.";
+                    break;
+                case "cat":
+                    output = "You don't need to read any files. You already know everything.";
+                    break;
+                case "tail":
+                    output = "Why bother looking at the end of a file? You already know what's there.";
+                    break;
+                case "pacman":
+                    output = "You don't need to install anything. You already have everything.";
+                    break;
+                case "apt-get":
+                    output = "Why bother with package management? You don't need anything else.";
+                    break;
+                case "yay":
+                    output = "Why yay for something when you already have everything you need?";
                     break;
                 default:
                     output = "I have no idea what you're talking about.";
@@ -216,6 +267,13 @@
      <h2>Command: 'apt-get'</h2>
      <h3>Description:</h3>
      <p>This command is used on Debian and Ubuntu-based Linux systems to install, remove, and manage software packages.</p>
+     </div>
+     
+     <button class="command-button" onclick="showDescription('yay')">yay</button>
+     <div id="yay" class="command-description">
+     <h2>Command: 'yay'</h2>
+     <h3>Description:</h3>
+     <p>This command is used for searching, installing, upgrading and removing packages from the Arch User Repository.</p>
      </div>
 </body>
 </html>
