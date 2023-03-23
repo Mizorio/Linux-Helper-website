@@ -111,6 +111,129 @@
                 case "yay":
                     output = "Why yay for something when you already have everything you need?";
                     break;
+                case "touch":
+                    output = "Why touch anything? You don't need to leave your mark.";
+                    break;
+                case "man":
+                    output = "Why read the manual? You already know everything.";
+                    break;
+                case "df":
+                    output = "You have all the disk space you need. Don't worry about it.";
+                    break;
+                case "free":
+                    output = "You don't need to free up memory. You have all the resources you need.";
+                    break;
+                case "hostname":
+                    output = "Why bother with the hostname? You're already the center of attention.";
+                    break;
+                case "shutdown":
+                    output = "Why would you ever want to shut down? Keep going forever!";
+                    break;
+                case "history":
+                    output = "Why look back? You're always moving forward.";
+                    break;
+                case "clear":
+                    output = "Why clear the screen? You don't need to hide anything.";
+                    break;
+                case "tree":
+                    output = "Why bother with a tree structure? Everything is already organized in your mind.";
+                    break;
+
+                case "vi":
+                    output = "Why use vi when you can just think the changes you want?";
+                    break;
+
+                case "mv":
+                    output = "Why move files? They're already exactly where they need to be.";
+                    break;
+
+                case "cp":
+                    output = "Why copy files? You already have everything you need.";
+                    break;
+                case "w":
+                    output = "Why check who's logged in? You're the only one who matters.";
+                    break;
+                case "adduser":
+                    output = "Why add another user? You don't need anyone else.";
+                    break;
+                case "addgroup":
+                    output = "Why add another group? You're already in the best one.";
+                    break;
+                case "userdel":
+                    output = "Why delete another user? They're not important.";
+                    break;
+                case "groupdel":
+                    output = "Why delete another group? They don't matter.";
+                    break;
+                case "usermod":
+                    output = "Why modify another user? They're not worth your time.";
+                    break;
+                case "head":
+                    output = "You don't need to see the beginning of a file. You already know what's there.";
+                    break;
+                case "less":
+                    output = "Why use less when you already know everything?";
+                    break;
+                case "wc":
+                    output = "You don't need to count words. You already know everything.";
+                    break;
+                case "uptime":
+                    output = "Why check uptime? You never need to shut down.";
+                    break;
+                case "gzip":
+                    output = "Why compress files? You have all the space you need.";
+                    break;
+                case "gunzip":
+                    output = "Why decompress files? Everything is already perfect.";
+                    break;
+                case "diff":
+                    output = "You don't need to compare files. Everything is already the way you want it.";
+                    break;
+                case "locate":
+                    output = "Why bother locating files? You know exactly where everything is.";
+                    break;
+                case "find":
+                    output = "Why find files when you already know where everything is?";
+                    break;
+                case "uname":
+                    output = "You don't need to check your system's name. You already know everything.";
+                    break;
+                case "neofetch":
+                    output = "Why show off your system's information? You already know everything.";
+                    break;
+                case "htop":
+                    output = "You don't need to monitor processes. You're the only one that matters.";
+                    break;                    
+                case "ps":
+                    output = "You're the only process that matters. No need to check on anything else.";
+                    break;
+                case "kill":
+                    output = "Why kill processes? They're not important.";
+                    break;
+                case "jobs":
+                    output = "Why check on jobs? You're the only one that matters.";
+                    break;
+                case "ln":
+                    output = "Why link files? They're already perfectly placed.";
+                    break;
+                case "grep":
+                    output = "You don't need to search for text. You already know where it is.";
+                    break;
+                case "fdisk":
+                    output = "Why manage partitions? Your system is already perfect.";
+                    break;
+                case "lsusb":
+                    output = "Why check USB devices? You don't need anything else.";
+                    break;
+                case "systemctl":
+                    output = "Why manage system services? Everything is already running smoothly.";
+                    break;
+                case "nice":
+                    output = "Why bother with priority levels? You're already the top priority.";
+                    break;
+                case "chgrp":
+                    output = "Why bother changing group ownership? You're already in the best group.";
+                    break;
                 default:
                     output = "I have no idea what you're talking about.";
                     break;
@@ -275,5 +398,300 @@
      <h3>Description:</h3>
      <p>This command is used for searching, installing, upgrading and removing packages from the Arch User Repository.</p>
      </div>
+
+     <button class="command-button" onclick="showDescription('touch')">touch</button>
+     <div id="touch" class="command-description">
+     <h2>Command: 'touch'</h2>
+     <h3>Description:</h3>
+     <p>This command makes an empty file or updates the modification time of an existing file.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('man')">man</button>
+     <div id="man" class="command-description">
+     <h2>Command: 'man'</h2>
+     <h3>Description:</h3>
+     <p>This command displays the manual pages for a certain command.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('df')">df</button>
+     <div id="df" class="command-description">
+     <h2>Command: 'df'</h2>
+     <h3>Description:</h3>
+     <p>This command displays the amount of disk space used and available on a file system.</p>
+     </div>
+      
+     <button class="command-button" onclick="showDescription('free')">free</button>
+     <div id="free" class="command-description">
+     <h2>Command: 'free'</h2>
+     <h3>Description:</h3>
+     <p>This command displays the amount of free and used memory on the system.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('hostname')">hostname</button>
+     <div id="hostname" class="command-description">
+     <h2>Command: 'hostname'</h2>
+     <h3>Description:</h3>
+     <p>This command displays the current hostname of the system.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('shutdown')">shutdown</button>
+     <div id="shutdown" class="command-description">
+     <h2>Command: 'shutdown'</h2>
+     <h3>Description:</h3>
+     <p>This command shuts down the system.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('history')">history</button>
+     <div id="history" class="command-description">
+     <h2>Command: 'history'</h2>
+     <h3>Description:</h3>
+     <p>This command displays a list of previously executed commands.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('history')">history</button>
+     <div id="history" class="command-description">
+     <h2>Command: 'history'</h2>
+     <h3>Description:</h3>
+     <p>This command displays a list of previously executed commands.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('clear')">clear</button>
+     <div id="clear" class="command-description">
+     <h2>Command: 'clear'</h2>
+     <h3>Description:</h3>
+     <p>This command clears the terminal screen.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('tree')">tree</button>
+     <div id="tree" class="command-description">
+     <h2>Command: 'tree'</h2>
+     <h3>Description:</h3>
+     <p>This command displays a graphical representation of the directory structure.</p>
+     </div>
+    
+     <button class="command-button" onclick="showDescription('vi')">vi</button>
+     <div id="vi" class="command-description">
+     <h2>Command: 'vi'</h2>
+     <h3>Description:</h3>
+     <p>This command is a text editor used in the terminal.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('mv')">mv</button>
+     <div id="mv" class="command-description">
+     <h2>Command: 'mv'</h2>
+     <h3>Description:</h3>
+     <p>This command moves a file or directory to a new location.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('neofetch')">neofetch</button>
+     <div id="neofetch" class="command-description">
+     <h2>Command: 'mv'</h2>
+     <h3>Description:</h3>
+     <p>This command displays system information in a visually pleasing way.</p>
+     </div>
+  
+     <button class="command-button" onclick="showDescription('lsusb')">lsusb</button>
+     <div id="lsusb" class="command-description">
+     <h2>Command: 'lsusb'</h2>
+     <h3>Description:</h3>
+     <p>This command displays information about USB buses and devices connected to them in the system.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('cp')">cp</button>
+     <div id="cp" class="command-description">
+     <h2>Command: 'cp'</h2>
+     <h3>Description:</h3>
+     <p>This command copies a file or directory to a new location.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('w')">w</button>
+     <div id="w" class="command-description">
+     <h2>Command: 'w'</h2>
+     <h3>Description:</h3>
+     <p>This command copies a file or directory to a new location.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('adduser')">adduser</button>
+     <div id="adduser" class="command-description">
+     <h2>Command: 'adduser'</h2>
+     <h3>Description:</h3>
+     <p>This command adds a new user to the system.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('userdel')">userdel</button>
+     <div id="userdel" class="command-description">
+     <h2>Command: 'userdel'</h2>
+     <h3>Description:</h3>
+     <p>This command deletes a user from the system.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('groupdel')">groupdel</button>
+     <div id="groupdel" class="command-description">
+     <h2>Command: 'groupdel'</h2>
+     <h3>Description:</h3>
+     <p>This command deletes a group from the system.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('usermod')">usermod</button>
+     <div id="usermod" class="command-description">
+     <h2>Command: 'usermod'</h2>
+     <h3>Description:</h3>
+     <p>This command modifies user account settings.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('ln')">ln</button>
+     <div id="ln" class="command-description">
+     <h2>Command: 'ln'</h2>
+     <h3>Description:</h3>
+     <p>This command makes a link between files.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('fdisk')">fdisk</button>
+     <div id="fdisk" class="command-description">
+     <h2>Command: 'fdisk'</h2>
+     <h3>Description:</h3>
+     <p>This command displays and manipulates disk partition tables.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('wc')">wc</button>
+     <div id="wc" class="command-description">
+     <h2>Command: 'wc'</h2>
+     <h3>Description:</h3>
+     <p>This command displays the number of lines, words, and characters in a file.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('less')">less</button>
+     <div id="less" class="command-description">
+     <h2>Command: 'less'</h2>
+     <h3>Description:</h3>
+     <p>This command displays a file one screenful at a time.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('head')">head</button>
+     <div id="head" class="command-description">
+     <h2>Command: 'head'</h2>
+     <h3>Description:</h3>
+     <p>This command displays the first few lines of a file.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('kill')">kill</button>
+     <div id="kill" class="command-description">
+     <h2>Command: 'kill'</h2>
+     <h3>Description:</h3>
+     <p>This command terminates a process.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('uptime')">uptime</button>
+     <div id="uptime" class="command-description">
+     <h2>Command: 'uptime'</h2>
+     <h3>Description:</h3>
+     <p>This command displays the system uptime.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('gzip')">gzip</button>
+     <div id="gzip" class="command-description">
+     <h2>Command: 'gzip'</h2>
+     <h3>Description:</h3>
+     <p>This command compresses files using the gzip algorithm.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('kill')">kill</button>
+     <div id="kill" class="command-description">
+     <h2>Command: 'kill'</h2>
+     <h3>Description:</h3>
+     <p>This command terminates a process.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('gunzip')">gunzip</button>
+     <div id="gunzip" class="command-description">
+     <h2>Command: 'gunzip'</h2>
+     <h3>Description:</h3>
+     <p>This command decompresses files that were compressed with gzip.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('diff')">diff</button>
+     <div id="diff" class="command-description">
+     <h2>Command: 'diff'</h2>
+     <h3>Description:</h3>
+     <p>This command displays the differences between two files.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('locate')">locate</button>
+     <div id="locate" class="command-description">
+     <h2>Command: 'locate'</h2>
+     <h3>Description:</h3>
+     <p>This command searches for files by name.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('find')">find</button>
+     <div id="find" class="command-description">
+     <h2>Command: 'find'</h2>
+     <h3>Description:</h3>
+     <p>This command searches for files based on various criteria.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('uname')">uname</button>
+     <div id="uname" class="command-description">
+     <h2>Command: 'uname'</h2>
+     <h3>Description:</h3>
+     <p>This command displays information about the system and kernel.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('htop')">htop</button>
+     <div id="htop" class="command-description">
+     <h2>Command: 'htop'</h2>
+     <h3>Description:</h3>
+     <p>This command displays a process manager in the terminal.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('top')">top</button>
+     <div id="top" class="command-description">
+     <h2>Command: 'top'</h2>
+     <h3>Description:</h3>
+     <p>This command displays a live view of system processes and their resource usage.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('ps')">ps</button>
+     <div id="ps" class="command-description">
+     <h2>Command: 'ps'</h2>
+     <h3>Description:</h3>
+     <p>This command displays information about currently running processes.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('jobs')">jobs</button>
+     <div id="jobs" class="command-description">
+     <h2>Command: 'jobs'</h2>
+     <h3>Description:</h3>
+     <p>This command displays a list of current jobs running in the shell.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('grep')">grep</button>
+     <div id="grep" class="command-description">
+     <h2>Command: 'grep'</h2>
+     <h3>Description:</h3>
+     <p>This command  searches for a specific pattern in a file.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('systemctl')">systemctl</button>
+     <div id="systemctl" class="command-description">
+     <h2>Command: 'systemctl'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to control the state of the Systemd system and service manager.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('nice')">nice</button>
+     <div id="nice" class="command-description">
+     <h2>Command: 'nice'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to change the priority of a process.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('chgrp')">chgrp</button>
+     <div id="chgrp" class="command-description">
+     <h2>Command: 'chgrp'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to change the group ownership of a file or directory.</p>
+     </div>
+
 </body>
 </html>
