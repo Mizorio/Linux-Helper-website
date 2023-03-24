@@ -6,48 +6,63 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Linux commands explanation</title>
 <style>
-        body {
-            background-color: #000;
-            color: #0f0;
+    body {
+        background-color: #000;
+        color: #0f0;
+    }
+    h1 {
+        background-color: rgb(224, 21, 38);
+        color: #0f0;
+        padding: 10px;
+        text-align: center;
+    }
+    h2 {
+        background-color: #0f0;
+        color: #000;
+        padding: 5px;
+        margin: 0 0 20px 0;
+    }
+    p {
+        background-color: #000;
+        color: #0f0;
+        padding: 5px;
+        margin: 0 0 20px 0;
+    }
+    .command-button {
+        background-color: #0f0;
+        color: #000;
+        padding: 5px;
+        margin: 0 0 10px 0;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .command-description {
+        display: none;
+    }
+</style>
+<script>
+function showDescription(command) {
+    var descriptions = document.getElementsByClassName("command-description");
+    for (var i = 0; i < descriptions.length; i++) {
+        descriptions[i].style.display = "none";
+    }
+    document.getElementById(command).style.display = "block";
+}
+
+function showCommands() {
+    var distro = document.getElementById("linux-distro").value;
+    var commands = document.getElementsByClassName("command-button");
+    for (var i = 0; i < commands.length; i++) {
+        var distros = commands[i].getAttribute("data-distros").split(",");
+        if (distros.includes(distro)) {
+            commands[i].style.display = "block";
+        } else {
+            commands[i].style.display = "none";
         }
-        h1 {
-            background-color: rgb(224, 21, 38);
-            color: #0f0;
-            padding: 10px;
-            text-align: center;
-        }
-        h2 {
-            background-color: #0f0;
-            color: #000;
-            padding: 5px;
-            margin: 0 0 20px 0;
-        }
-        p {
-            background-color: #000;
-            color: #0f0;
-            padding: 5px;
-            margin: 0 0 20px 0;
-        }
-        .command-button {
-            background-color: #0f0;
-            color: #000;
-            padding: 5px;
-            margin: 0 0 10px 0;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .command-description {
-            display: none;
-        }</style><script>
-        function showDescription(command) {
-            var descriptions = document.getElementsByClassName("command-description");
-            for (var i = 0; i < descriptions.length; i++) {
-                descriptions[i].style.display = "none";
-            }
-            document.getElementById(command).style.display = "block";
-        }
-        function stupidGpt() {
+    }
+}
+function stupidGpt() {
             var input = document.getElementById("command-input").value;
             var output = "";
             switch (input) {
@@ -138,15 +153,12 @@
                 case "tree":
                     output = "Why bother with a tree structure? Everything is already organized in your mind.";
                     break;
-
                 case "vi":
                     output = "Why use vi when you can just think the changes you want?";
                     break;
-
                 case "mv":
                     output = "Why move files? They're already exactly where they need to be.";
                     break;
-
                 case "cp":
                     output = "Why copy files? You already have everything you need.";
                     break;
@@ -240,37 +252,59 @@
             }
             document.getElementById("gpt-output").innerHTML = output;
         }
-        </script>
-        </head>
-        <form>
-    <label for="linux-distro">Choose the Linux distro that you need help with: </label>
-    <select id="linux-distro" name="linux-distro">
-      <option value="debian">Debian</option>
-      <option value="arch">Arch Linux</option>
-    </select>
-    <input type="submit" value="Submit">
-  </form>
-  <body>
+</script>
+</head>
+<body onload="showCommands()">
     <h1>Linux Commands Explanation</h1>
+    <form>
+        <label for="linux-distro">Choose the Linux distro that you need help with: </label>
+        <select id="linux-distro" name="linux-distro" onchange="showCommands()">
+            <option value="all">All Distros</option>
+            <option value="debian">Debian</option>
+            <option value="arch">Arch Linux</option>
+        </select>
+    </form>
+
     <input type="text" id="command-input">
     <button onclick="stupidGpt()">Ask Stupid GPT</button>
     <div id="gpt-output"></div>
+
     <h2>Terminal</h2>
     <h3>How to access?</h3>
     <p>To access terminal, press Ctrl+Alt+T</p> 
 
-    <button class="command-button" onclick="showDescription('sudo')">sudo</button>
+    <button class="command-button" onclick="showDescription('sudo')" data-distros="all,debian,arch">sudo</button>
     <div id="sudo" class="command-description">
-     <h2>Command: 'sudo'</h2>
-     <h3>Description:</h3>
-    <p>This command allows a user with administrative privileges to execute commands as another user or as the superuser (root).</p>
+        <h2>Command: 'sudo'</h2>
+        <h3>Description:</h3>
+        <p>This command allows a user with administrative privileges to execute commands as another user or as the superuser (root).</p>
     </div>
+    <button class="command-button" onclick="showDescription('pacman')" data-distros="all,arch">pacman</button>
+     <div id="pacman" class="command-description">
+     <h2>Command: 'pacman'</h2>
+     <h3>Description:</h3>
+     <p>This command is used to install, upgrade, and manage software packages on an Arch Linux system.</p>
+     </div>
+
+     <button class="command-button" onclick="showDescription('apt-get')" data-distros="all,debian">apt-get</button>
+     <div id="apt-get" class="command-description">
+     <h2>Command: 'apt-get'</h2>
+     <h3>Description:</h3>
+     <p>This command is used on Debian and Ubuntu-based Linux systems to install, remove, and manage software packages.</p>
+     </div>
+     
+     <button class="command-button" onclick="showDescription('yay')" data-distros="all,arch">yay</button>
+     <div id="yay" class="command-description">
+     <h2>Command: 'yay'</h2>
+     <h3>Description:</h3>
+     <p>This command is used for searching, installing, upgrading and removing packages from the Arch User Repository.</p>
+     </div>
 
     <button class="command-button" onclick="showDescription('who')">who</button>
     <div id="who" class="command-description">
         <h2>Command: 'who'</h2>
         <h3>Description:</h3>
-        <p>This command lists all the users connected to the system. Each line corresponds to a connection, and contains the username, date and time of connection, and the workstation address of the user.</p>
+        <p>This command lists all the users connected to the system.</p>
     </div>
 
     <button class="command-button" onclick="showDescription('id')">id</button>
@@ -284,7 +318,7 @@
     <div id="useradd" class="command-description">
         <h2>Command: 'useradd'</h2>
         <h3>Description:</h3>
-        <p>This command is used to make a new user account on Linux systems. It makes a user without a password, and then the password can be set using the 'passwd' command.</p>
+        <p>This command is used to make a new user account on Linux systems.</p>
     </div>
     
     <button class="command-button" onclick="showDescription('groupadd')">groupadd</button>
@@ -376,27 +410,6 @@
      <h2>Command: 'tail'</h2>
      <h3>Description:</h3>
      <p>The 'tail' command is used to display the last few lines of a text file in a terminal window.</p>
-     </div>
-
-     <button class="command-button" onclick="showDescription('pacman')">pacman</button>
-     <div id="pacman" class="command-description">
-     <h2>Command: 'pacman'</h2>
-     <h3>Description:</h3>
-     <p>This command is a package manager for the Arch Linux operating system. It is used to install, upgrade, and manage software packages on an Arch Linux system.</p>
-     </div>
-
-     <button class="command-button" onclick="showDescription('apt-get')">apt-get</button>
-     <div id="apt-get" class="command-description">
-     <h2>Command: 'apt-get'</h2>
-     <h3>Description:</h3>
-     <p>This command is used on Debian and Ubuntu-based Linux systems to install, remove, and manage software packages.</p>
-     </div>
-     
-     <button class="command-button" onclick="showDescription('yay')">yay</button>
-     <div id="yay" class="command-description">
-     <h2>Command: 'yay'</h2>
-     <h3>Description:</h3>
-     <p>This command is used for searching, installing, upgrading and removing packages from the Arch User Repository.</p>
      </div>
 
      <button class="command-button" onclick="showDescription('touch')">touch</button>
@@ -692,6 +705,5 @@
      <h3>Description:</h3>
      <p>This command is used to change the group ownership of a file or directory.</p>
      </div>
-
 </body>
 </html>
